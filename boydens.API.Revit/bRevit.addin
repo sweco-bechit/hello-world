@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<RevitAddIns>
+  <AddIn Type="Command">
+    <Name>boyapi</Name>
+    <FullClassName>boydens.API.Revit.Element</FullClassName>
+    <Text>bRevit</Text>
+    <Description>Places the Group at Particular Point</Description>
+    <VisibilityMode>AlwaysVisible</VisibilityMode>
+    <Assembly>C:\ProgramData\Autodesk\ApplicationPlugins\boyapi.bundle\Contents\2018\boydens.API.Revit.dll</Assembly>
+    <AddInId>502fe383-2648-4e98-adf8-5e6047f9dc34</AddInId>
+    <VendorId>ADSK</VendorId>
+    <VendorDescription>boydens</VendorDescription>
+  </AddIn>
+</RevitAddIns>
