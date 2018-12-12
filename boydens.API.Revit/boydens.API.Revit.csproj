@@ -32,12 +32,24 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>HelloWorld.addin</ApplicationManifest>
+  </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RevitAPI">
-      <HintPath>C:\Program Files\Autodesk\Revit 2018\RevitAPI.dll</HintPath>
+    <Reference Include="RevitAddInUtility, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Revit 2018\RevitAddInUtility.dll</HintPath>
+      <Private>False</Private>
     </Reference>
-    <Reference Include="RevitAPIUI">
+    <Reference Include="RevitAPI, Version=18.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\Autodesk\Revit 2018\RevitAPI.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="RevitAPIUI, Version=18.0.0.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Revit 2018\RevitAPIUI.dll</HintPath>
+      <Private>False</Private>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -49,19 +61,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Element.cs" />
+    <Compile Include="boyapi.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="bRevit.addin" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="PackageContents.xml" />
+    <None Include="HelloWorld.addin" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)boydens.API.Revit.dll" "C:\ProgramData\Autodesk\ApplicationPlugins\boyapi.bundle\Contents\2018\" /i /e /y /c
-xcopy "$(SolutionDir)boydens.API.Revit\PackageContents.xml" "C:\ProgramData\Autodesk\ApplicationPlugins\boyapi.bundle\" /i /e /y /c
-xcopy "$(SolutionDir)boydens.API.Revit\bRevit.addin" "C:\ProgramData\Autodesk\ApplicationPlugins\boyapi.bundle\Contents\2018\" /i /e /y /c</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2017\" /i /e /y /c
+xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2018\" /i /e /y /c
+xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2019\" /i /e /y /c
+xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2017\" /i /e /y /c
+xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2018\" /i /e /y /c
+xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2019\" /i /e /y /c
+</PostBuildEvent>
   </PropertyGroup>
 </Project>
