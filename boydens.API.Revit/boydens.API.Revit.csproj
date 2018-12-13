@@ -65,16 +65,17 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="HelloWorld.addin" />
+    <None Include="HelloWorld.addin">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="PackageContents.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <PropertyGroup>
-    <PostBuildEvent>xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2017\" /i /e /y /c
-xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2018\" /i /e /y /c
-xcopy "$(TargetDir)boydens.API.Revit.dll" "$(programdata)\Autodesk\Revit\Addins\2019\" /i /e /y /c
-xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2017\" /i /e /y /c
-xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2018\" /i /e /y /c
-xcopy "$(ProjectDir)HelloWorld.addin" "$(programdata)\Autodesk\Revit\Addins\2019\" /i /e /y /c
-</PostBuildEvent>
+    <PostBuildEvent>xcopy "$(TargetDir)boydens.API.Revit.dll" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\Contents\2018\" /i /e /y /c
+xcopy "$(ProjectDir)PackageContents.xml" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\" /i /e /y /c
+xcopy "$(ProjectDir)HelloWorld.addin" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\Contents\2018\" /i /e /y /c</PostBuildEvent>
   </PropertyGroup>
 </Project>

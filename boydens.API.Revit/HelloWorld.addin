@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
 <RevitAddIns>
   <AddIn Type="Command">
-    <Assembly>C:\ProgramData\Autodesk\Revit\Addins\2017\boydens.API.Revit.dll</Assembly>
+    <Assembly>boydens.API.Revit.dll</Assembly>
     <AddInId>70e707c9-5315-453d-b416-4a603b2acf4e</AddInId>
     <FullClassName>boydens.API.Revit.HelloWorld</FullClassName>
     <Text>Hello World</Text>
@@ -9,4 +9,13 @@
     <VendorDescription>boydens, www.boydens.be</VendorDescription>
     <VisibilityMode>AlwaysVisible</VisibilityMode>
   </AddIn>
+
+  <!--<AddIn Type="Application">
+    <Name>Hello World</Name>
+    <Assembly>C:\ProgramData\Autodesk\ApplicationPlugins\boydens Revit API.bundle\Contents\2018\boydens.API.Revit.dll</Assembly>
+    <AddInId>70e707c9-5315-453d-b416-4a603b2acf4e</AddInId>
+    <FullClassName>boydens.API.Revit.HelloWorld</FullClassName>
+    <VendorId>boydens</VendorId>
+    <VendorDescription>boydens, www.boydens.be</VendorDescription>
+  </AddIn>-->
 </RevitAddIns>
