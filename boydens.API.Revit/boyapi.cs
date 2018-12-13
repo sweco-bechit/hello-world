@@ -24,33 +24,32 @@ namespace boydens.API.Revit
         }
     }
 
-    //public class CreateManifest
-    //{
-    //    //create a new addin manifest
-    //    RA.RevitAddInManifest Manifest = new RA.RevitAddInManifest();
+//public class CreateManifest
+//{
+//    //create a new addin manifest
+//    RA.RevitAddInManifest Manifest = new RA.RevitAddInManifest();
 
-    //    //create an external command
-    //    RA.RevitAddInCommand command1 = new RA.RevitAddInCommand("full path\assemblyName.dll", Guid.NewGuid(), "namespace.className", "boydens");
-    //    command1.Description = "description";
-    //    command1.Text = "display text";
+//    //create an external command
+//    RA.RevitAddInCommand command1 = new RA.RevitAddInCommand("full path\assemblyName.dll", Guid.NewGuid(), "namespace.className", "boydens");
+//    command1.Description = "description";
+//    command1.Text = "display text";
 
-    //    // this command only visible in Revit MEP, Structure, and only visible 
-    //    // in Project document or when no document at all
-    //    command1.Discipline = Discipline.Mechanical | Discipline.Electrical |
-    //                            Discipline.Piping | Discipline.Structure;
-    //    command1.VisibilityMode = VisibilityMode.NotVisibleInFamily;
+//    // this command only visible in Revit MEP, Structure, and only visible
+//    // in Project document or when no document at all
+//    command1.Discipline = Discipline.Mechanical | Discipline.Electrical |
+//                            Discipline.Piping | Discipline.Structure;
+//    command1.VisibilityMode = VisibilityMode.NotVisibleInFamily;
 
-    //    //create an external application
-    //    RA.RevitAddInApplication application1 = new RA.RevitAddInApplication("appName",
-    //        "full path\assemblyName.dll", Guid.NewGuid(), "namespace.className", "boydens");
+//    //create an external application
+//    RA.RevitAddInApplication application1 = new RA.RevitAddInApplication("appName",
+//        "full path\assemblyName.dll", Guid.NewGuid(), "namespace.className", "boydens");
 
-    //    //add both command(s) and application(s) into manifest
-    //    Manifest.AddInCommands.Add(command1);
-    //    Manifest.AddInApplications.Add(application1);
+//    //add both command(s) and application(s) into manifest
+//    Manifest.AddInCommands.Add(command1);
+//    Manifest.AddInApplications.Add(application1);
 
-    //    //save manifest to a file
-    //    RA.RevitProduct revitProduct1 = RA.RevitProductUtility.GetAllInstalledRevitProducts()[0];
-    //    Manifest.SaveAs(revitProduct1.AllUsersAddInFolder + "\RevitAddInUtilitySample.addin");
-    //}
+//    //save manifest to a file
+//    RA.RevitProduct revitProduct1 = RA.RevitProductUtility.GetAllInstalledRevitProducts()[0];
+//    Manifest.SaveAs(revitProduct1.AllUsersAddInFolder + "\RevitAddInUtilitySample.addin");
+//}
 }
-
