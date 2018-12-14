@@ -32,10 +32,14 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <ApplicationManifest>HelloWorld.addin</ApplicationManifest>
+    <StartupObject />
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="pyRevitLoader">
+      <HintPath>C:\GitHub\pyRevit\pyrevitlib\pyrevit\loader\addin\277\pyRevitLoader.dll</HintPath>
+    </Reference>
     <Reference Include="RevitAddInUtility, Version=18.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\Autodesk\Revit 2018\RevitAddInUtility.dll</HintPath>
