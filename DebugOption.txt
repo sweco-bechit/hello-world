@@ -1,3 +1,0 @@
-xcopy "$(TargetDir)boydens.API.Revit.dll" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\Contents\2018\" /i /e /y /c
-xcopy "$(ProjectDir)PackageContents.xml" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\" /i /e /y /c
-xcopy "$(ProjectDir)HelloWorld.addin" "$(ProgramData)\Autodesk\ApplicationPlugins\boydens Revit API.bundle\Contents\2018\" /i /e /y /c
